@@ -12,15 +12,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const nomePublico = process.env.NEXT_PUBLIC_CLINIC_NAME ?? "Clínica Equilíbrio";
+
 export const metadata: Metadata = {
-  title: "Clínica Equilíbrio | Fisioterapia e Pilates",
+  title: `${nomePublico} | Fisioterapia e Pilates`,
   description:
     "Fisioterapia, Pilates, alongamento e treino funcional em Várzea Grande. Atendimento individualizado para mais movimento, autonomia e bem-estar.",
   keywords: [
     "fisioterapia em Várzea Grande",
     "Pilates em Várzea Grande",
     "reabilitação",
-    "Clínica Equilíbrio",
+    `${nomePublico}`,
     "alongamento funcional",
   ],
   other: {

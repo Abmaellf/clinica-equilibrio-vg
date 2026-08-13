@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+const nomePublico = process.env.NEXT_PUBLIC_CLINIC_NAME ?? "Clínica Equilíbrio";
 
 const whatsappUrl =
   "https://wa.me/5565992702996?text=Olá%2C%20vim%20pelo%20site%20da%20Clínica%20Equilíbrio%20e%20quero%20consultar%20os%20horários%20disponíveis.";
@@ -84,10 +85,10 @@ export default function Home() {
     <main>
       <header className="site-header">
         <div className="nav-shell">
-          <a className="brand" href="#inicio" aria-label="Clínica Equilíbrio — início">
+          <a className="brand" href="#inicio" aria-label={`${nomePublico} — início`}>
             <BrandMark />
             <span className="brand-copy">
-              <strong>Equilíbrio</strong>
+              <strong>Equilíbrio 2</strong>
               <small>Fisioterapia &amp; Pilates</small>
             </span>
           </a>
@@ -165,7 +166,7 @@ export default function Home() {
               Mais do que tratar sintomas, queremos entender o que limita seus movimentos e acompanhar sua evolução de perto.
             </p>
             <p>
-              Na Clínica Equilíbrio, fisioterapia, Pilates, alongamento e treino funcional se encontram em um ambiente acolhedor, com atenção profissional e equipamentos selecionados para uma experiência segura.
+              Na {nomePublico}, fisioterapia, Pilates, alongamento e treino funcional se encontram em um ambiente acolhedor, com atenção profissional e equipamentos selecionados para uma experiência segura.
             </p>
             <a className="inline-link" href={whatsappUrl} target="_blank" rel="noreferrer">
               Conversar com a equipe <span aria-hidden="true">↗</span>
@@ -380,7 +381,7 @@ export default function Home() {
           </div>
         </div>
         <div className="shell footer-bottom">
-          <span>© 2026 Clínica Equilíbrio</span>
+          <span>`© 2026 {nomePublico}`</span>
           <span>Saúde em movimento.</span>
         </div>
       </footer>
@@ -397,8 +398,8 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Physiotherapy",
-            name: "Clínica Equilíbrio",
-            description: "Clínica de fisioterapia e Pilates em Várzea Grande.",
+            name: `${nomePublico}`,
+            description: `${nomePublico} — Clínica de fisioterapia e Pilates em Várzea Grande.`,
             telephone: "+55 65 99270-2996",
             address: {
               "@type": "PostalAddress",
