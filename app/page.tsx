@@ -88,7 +88,7 @@ export default function Home() {
           <a className="brand" href="#inicio" aria-label={`${nomePublico} — início`}>
             <BrandMark />
             <span className="brand-copy">
-              <strong>Equilíbrio 2</strong>
+              <strong>Equilíbrio</strong>
               <small>Fisioterapia &amp; Pilates</small>
             </span>
           </a>
